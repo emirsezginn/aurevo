@@ -1,4 +1,13 @@
 import { Project, Service, TeamMember, Stat } from './types';
+import ResidentialImg from './components/assets/Residential.avif';
+import CommercialImg from './components/assets/Commercial.avif';
+import InteriorImg from './components/assets/Interior.avif';
+import UrbanImg from './components/assets/Urban.avif';
+import Residential2Img from './components/assets/Residential2.jpg';
+import Commercial2Img from './components/assets/Commercial.jpg';
+import Principal1Img from './components/assets/principal1.jpg';
+import Principal2Img from './components/assets/principal2.jpg';
+import Principal3Img from './components/assets/principal3.jpg';
 
 export const PROJECTS: Project[] = [
   {
@@ -6,7 +15,7 @@ export const PROJECTS: Project[] = [
     title: 'RESIDENCE 01 // ETHER',
     category: 'Residential',
     location: 'Malibu, CA',
-    image: './assets/residential.avif', 
+    image: ResidentialImg, 
     description: 'A study in transparency. This cantilevered structure of steel and glass dissolves the boundary between the inhabitant and the Pacific horizon.'
   },
   {
@@ -14,7 +23,7 @@ export const PROJECTS: Project[] = [
     title: 'THE MONOLITH',
     category: 'Commercial',
     location: 'Copenhagen, DK',
-    image: './assets/commercial.avif',
+    image: CommercialImg,
     description: 'Brutalist permanence meets kinetic workspace. A corporate headquarters designed to impose gravity while facilitating fluid thought.'
   },
   {
@@ -22,7 +31,7 @@ export const PROJECTS: Project[] = [
     title: 'ATRIUM // VOID',
     category: 'Interior',
     location: 'SoHo, NY',
-    image: './assets/interior.avif',
+    image: InteriorImg,
     description: 'Adaptive reuse of a 19th-century textile factory. We removed the floors to create a vertical gallery of light and silence.'
   },
   {
@@ -30,7 +39,7 @@ export const PROJECTS: Project[] = [
     title: 'URBAN LUNG',
     category: 'Urban',
     location: 'Singapore, SG',
-    image: './assets/urban.avif',
+    image: UrbanImg,
     description: 'A vertical garden tower acting as a biophilic respiratory system for the high-density district surrounding it.'
   },
   {
@@ -38,7 +47,7 @@ export const PROJECTS: Project[] = [
     title: 'KYOTO SILENCE',
     category: 'Residential',
     location: 'Kyoto, JP',
-    image: './assets/residential2.jpg',
+    image: Residential2Img,
     description: 'A contemporary Machiya utilizing charred timber (Shou Sugi Ban) and raw concrete to frame moments of absolute stillness.'
   },
   {
@@ -46,7 +55,7 @@ export const PROJECTS: Project[] = [
     title: 'VERTEX HUB',
     category: 'Commercial',
     location: 'Berlin, DE',
-    image: './assets/commercial.jpg',
+    image: Commercial2Img,
     description: 'Algorithmic facade design optimizing solar gain. A dynamic visual landmark for Berlin’s evolving tech district.'
   }
 ];
@@ -56,21 +65,21 @@ export const TEAM: TeamMember[] = [
     id: '1',
     name: 'ELENA VARIS',
     role: 'Principal',
-    image: './assets/principal1.jpg',
+    image: Principal1Img,
     bio: 'Elena’s philosophy sits at the intersection of brutalism and ecology, championing structures that age with dignity.'
   },
   {
     id: '2',
     name: 'MARCUS THORNE',
     role: 'Design Director',
-    image: './assets/principal3.jpg',
+    image: Principal3Img,
     bio: 'A pioneer in parametric architecture, Marcus engineers forms that defy conventional structural logic.'
   },
   {
     id: '3',
     name: 'SOPHIA LI',
     role: 'Interior Lead',
-    image: './assets/principal2.jpg',
+    image: Principal2Img,
     bio: 'Sophia curates sensory experiences, believing that light and texture are the primary materials of habitation.'
   }
 ];
