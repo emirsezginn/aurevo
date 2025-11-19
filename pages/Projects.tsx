@@ -47,22 +47,22 @@ const Projects: React.FC = () => {
         </AnimatePresence>
       </motion.div>
 
-      <div className="pt-32 pb-24 px-6 lg:px-12 max-w-[1800px] mx-auto">
+      <div className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 sm:px-6 lg:px-12 max-w-[1800px] mx-auto">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-24 border-b border-onyx/10 pb-12"
+          className="mb-12 md:mb-24 border-b border-onyx/10 pb-8 md:pb-12"
         >
-          <h1 className="text-8xl md:text-[10rem] font-display text-onyx leading-none tracking-tighter">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[10rem] font-display text-onyx leading-none tracking-tighter">
             ARCHIVE
           </h1>
-          <div className="flex flex-col md:flex-row justify-between items-end mt-8 gap-4">
-             <p className="text-neutral-500 max-w-md font-light text-lg">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mt-6 md:mt-8 gap-4">
+             <p className="text-neutral-500 max-w-md font-light text-sm sm:text-base md:text-lg">
                A chronological collection of built environments, experimental structures, and theoretical studies.
              </p>
-             <span className="text-bronze-500 text-xs font-bold uppercase tracking-ultra hidden md:block">
+             <span className="text-bronze-500 text-xs font-bold uppercase tracking-ultra">
                Selected Works ({PROJECTS.length})
              </span>
           </div>
@@ -78,25 +78,25 @@ const Projects: React.FC = () => {
                transition={{ delay: 0.2 + (index * 0.1), duration: 0.5 }}
                onMouseEnter={() => setHoveredProject(project.id)}
                onMouseLeave={() => setHoveredProject(null)}
-               className="group border-b border-onyx/10 py-12 md:py-16 flex flex-col md:flex-row md:items-center justify-between relative transition-all duration-500 hover:bg-white/50 -mx-6 px-6 md:-mx-12 md:px-12"
+               className="group border-b border-onyx/10 py-8 md:py-12 lg:py-16 flex flex-col md:flex-row md:items-center justify-between relative transition-all duration-500 hover:bg-white/50 -mx-4 px-4 sm:-mx-6 sm:px-6 md:-mx-12 md:px-12"
              >
-                <div className="flex items-baseline gap-8 md:gap-16 z-10 pointer-events-none">
-                   <span className="text-xs font-bold text-neutral-300 group-hover:text-bronze-500 transition-colors duration-300 w-8">
+                <div className="flex items-start md:items-baseline gap-4 sm:gap-6 md:gap-16 z-10 pointer-events-none">
+                   <span className="text-xs font-bold text-neutral-300 group-hover:text-bronze-500 transition-colors duration-300 w-6 md:w-8 flex-shrink-0">
                      0{index + 1}
                    </span>
-                   <h2 className="text-4xl md:text-6xl font-display text-onyx group-hover:text-bronze-500 transition-colors duration-500">
+                   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-display text-onyx group-hover:text-bronze-500 transition-colors duration-500 break-words">
                      {project.title}
                    </h2>
                 </div>
 
-                <div className="flex items-center gap-8 mt-6 md:mt-0 z-10 pointer-events-none">
-                   <span className="text-xs font-bold uppercase tracking-ultra text-neutral-400 group-hover:text-onyx transition-colors duration-300 w-32 md:text-right">
+                <div className="flex items-center gap-4 sm:gap-6 md:gap-8 mt-4 md:mt-0 ml-10 sm:ml-12 md:ml-0 z-10 pointer-events-none">
+                   <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wide md:tracking-ultra text-neutral-400 group-hover:text-onyx transition-colors duration-300 flex-shrink-0">
                      {project.category}
                    </span>
-                   <span className="text-xs font-bold uppercase tracking-ultra text-neutral-400 group-hover:text-onyx transition-colors duration-300 w-32 text-right hidden md:block">
+                   <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wide md:tracking-ultra text-neutral-400 group-hover:text-onyx transition-colors duration-300 hidden sm:block flex-shrink-0">
                      {project.location}
                    </span>
-                   <div className="w-12 flex justify-end opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-4 group-hover:translate-x-0">
+                   <div className="w-8 md:w-12 hidden md:flex justify-end opacity-0 md:group-hover:opacity-100 transition-all duration-300 md:-translate-x-4 md:group-hover:translate-x-0">
                       <ArrowUpRight size={28} className="text-bronze-500" strokeWidth={1.5} />
                    </div>
                 </div>
