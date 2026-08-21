@@ -26,10 +26,7 @@ const Navbar: React.FC = () => {
 
   const isContactPage = location.pathname === '/contact';
   
-  // Explicit color management to ensure visibility without relying on mix-blend-mode
-  // 1. If Menu Open or Scrolled -> White Text (on Dark BG)
-  // 2. Default (Top of page) -> Black Text (on Light BG)
-  // 3. Exception: Contact Page Desktop Logo -> White Text (on Dark Left Panel)
+
 
   const getLogoClass = () => {
     if (isOpen || isScrolled) return 'text-white';
